@@ -7,7 +7,7 @@ This simulator is part of an analysis of a potential implementation of SNAP in P
 However, as an extension, you are able to analyze food stamp programs in any U.S. state. Note that the current implementation does not take into account local unemployment and food stamp accessibility conditions for locations other than Puerto Rico, so for improved accuracy consider adding these variables into the program for your desired region. More information on this is available in the Extension to U.S. States section.
 
 
-## USAGE
+## Usage
 
 Follow the following steps to run the simulation:
 
@@ -34,7 +34,7 @@ python Simulator.py
 For a demo of this process, refer to the SimulatorDemo video in this folder. In this video, two iterations of the simulation are run: one for Puerto Rico and one for California.
 
 
-## INPUTS
+## Inputs
 
 The simulator will request you to provide 4 inputs:
 
@@ -67,7 +67,7 @@ If you enter an invalid value for any of the four inputs, the simulator will pro
 If you accidentaly enter an undesired input and/or you would like to start the simulator over again, you may press Ctrl+C to quit the simulation or wait for the simulation to complete and run it again.
 
 
-## EXTENSION TO U.S. STATES
+## Extension to U.S. States
 
 There are three variables that the simulator excludes from its analysis for U.S. states. These variables are as follows:
 
@@ -92,7 +92,7 @@ Number of individuals that received the baseline program food stamps in the indi
 This variable was used in the benefit take up regression.
 
 
-## INTERPRETATION OF RESULTS
+## Interpretation oF Results
 
 It is important to remember the simulation is an estimation and its outputs should be interpreted as a suggestion of the relative direction and magnitude with which a particular program will impact labor market outcomes.
 
