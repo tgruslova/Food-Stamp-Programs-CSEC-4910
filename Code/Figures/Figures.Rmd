@@ -1,0 +1,87 @@
+---
+title: "Figures"
+author: "Tamara Gruslova"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(ggplot2)
+theme_set(theme_light(base_size = 12, base_family = "calibri"))
+```
+
+
+#employment change distribution and elasticity distribution
+
+```{r, warning=FALSE}
+emp <- read.csv("C:/Users/grusm/Downloads/EMP.csv")
+
+emp_nonzero <- emp[emp$EMP_change_pct < 0,]
+
+ggplot(emp_nonzero, aes(x = EMP_change_pct)) + 
+  geom_density(fill = "skyblue", color = "black") + 
+  labs(title = "Figure 7. Distribution of Individual Change in Employment Over Programs",
+       x = "Percent Change in Employment",
+       y = "Density")
+
+
+ggplot(emp_nonzero, aes(x = epsilon)) +
+  geom_density(fill = "skyblue", color = "black") + 
+  labs(title = "Figure 6. Distribution of Individual Elasticity of Employment",
+       x = "Elasticity of Employment",
+       y = "Density")
+
+```
+
+
+
+#hours change distribution and elasticity distribution
+
+```{r, warning=FALSE}
+hours <- read.csv("C:/Users/grusm/Downloads/HW.csv")
+
+hours_nonzero <- hours[hours$WKHP_change_pct < 0, ]
+
+ggplot(hours_nonzero, aes(x = WKHP_change_pct)) + 
+  geom_density(fill = "skyblue", color = "black") + 
+  labs(title = "Figure 9. Individual Change in Weekly Hours Worked Across Programs",
+       x = "Percent Change in Weekly Hours Worked",
+       y = "Density")
+
+
+ggplot(hours_nonzero, aes(x = hrs_elast)) +
+  geom_density(fill = "skyblue", color = "black") + 
+  labs(title = "Figure 8. Distribution of Individual Elasticity of Weekly Hours Work",
+       x = "Elasticity of Weekly Hours Worked",
+       y = "Density")
+
+```
+
+
+
+#takeup rate change distribution and elasticity distribution
+
+```{r, warning=FALSE}
+takeup <- read.csv("C:/Users/grusm/Downloads/TU.csv")
+
+ggplot(takeup, aes(x = takeup_change_pct)) + 
+  geom_density(fill = "skyblue", color = "black") + 
+  labs(title = "Figure 11. Distribution of Individual Change in Takeup Rate Over Programs",
+       x = "Percent Change in Takeup",
+       y = "Density")
+
+
+ggplot(takeup, aes(x = epsilon)) +
+  geom_density(fill = "skyblue", color = "black") + 
+  labs(title = "Figure 10. Distribution of Individual Elasticity of Take Up",
+       x = "Elasticity of Take Up",
+       y = "Density")
+
+```
+
+
