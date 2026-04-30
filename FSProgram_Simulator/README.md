@@ -13,7 +13,9 @@ Follow the following steps to run the simulation:
 
 1. Download this folder.
 
-2. In your terminal, set the directory to the folder and activate the virtual environment with the following code (replacing the beginning of the path to match the location of the folder on your computer):
+2. Create a python virtual environment (venv) within the folder.
+
+3. In your terminal, set the directory to the folder and activate the virtual environment with the following code (replacing the beginning of the path to match the location of the folder on your computer):
 
 ```bash
 cd Downloads
@@ -21,15 +23,22 @@ cd FSProgram_Simulator
 & c:\[Path to your downloads]\FSProgram_Simulator\.venv\Scripts\Activate.ps1
 ```
 
-3. Run the Python script with the following code:
+4. Install packages if needed
+```bash
+pip install requests
+pip install statsmodels scipy sci-learn
+pip install statsmodels scipy scikit-learn
+```
+
+5. Run the Python script with the following code:
 
 ```bash
 python Simulator.py
 ```
 
-4. The simulator will prompt you to enter a variety of inputs to set up your custom food stamps program. Follow the displayed instructions to do so. If you need more information, consult the inputs section below.
+6. The simulator will prompt you to enter a variety of inputs to set up your custom food stamps program. Follow the displayed instructions to do so. If you need more information, consult the inputs section below.
 
-5. The results of the simulation will be displayed.
+7. The results of the simulation will be displayed.
 
 For a demo of this process, refer to the SimulatorDemo video in this folder. In this video, two iterations of the simulation are run: one for Puerto Rico and one for California.
 
