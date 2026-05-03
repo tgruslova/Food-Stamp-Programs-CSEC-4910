@@ -47,6 +47,9 @@ vars = {
 }
 
 variables = requests.get(url, params=vars)
+if variables.status_code != 200:
+    raise ValueError(f"There was an issue processing the US Census API request with code {variables.status_code}.")
+
 arrays = variables.json()
 
 df = pd.DataFrame(arrays[1:], columns=arrays[0])

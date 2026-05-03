@@ -154,8 +154,10 @@ else:
 	print("\nFetching data for your state, this may take some time ...\n")
 
 	variables = requests.get(url, params=vars)
-	arrays = variables.json()
+	if variables.status_code != 200:
+		raise ValueError(f"There was an issue processing the US Census API request with code {variables.status_code}.")
 
+	arrays = variables.json()
 	df = pd.DataFrame(arrays[1:], columns=arrays[0])
 
 
